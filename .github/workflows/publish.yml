@@ -38,3 +38,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+# Rebuild after switching Pages source to Actions.
