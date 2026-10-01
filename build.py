@@ -32,6 +32,10 @@ for a in data:
  p.find('main').replace_with(BeautifulSoup(main,'html.parser'));(OUT/(a['slug']+'.html')).write_text(str(p))
 # New issue from central data. Original front-page extras remain in their archive section.
 p=BeautifulSoup((BASE/'index.html').read_text(),'html.parser')
+# Masthead reflects latest actual publication, not the rebuild clock.
+latest=max((a['datePublished'] for a in published),default=None)
+if latest:
+ dt=datetime.datetime.fromisoformat(latest);months=['','Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];p.select_one('.meta span').string=f'Ausgabe Nr. 2 · {dt.day}. {months[dt.month]} {dt.year}'
 def card(a,lead=False):
  return f'<article class="news-card"><div class="kick">{h(a["section"])} · Satire</div><a href="/{a["slug"]}"><img src="/{a["image"]}" alt="KI-Illustration" width="1536" height="864" loading="{ "eager" if lead else "lazy"}"><h{2 if lead else 3}>{h(a["title"])}</h{2 if lead else 3}></a><p>{h(a["deck"])}</p><small>KI-Illustration · '+('Entwurf' if a['status']=='draft' else h(a['datePublished'][:10]))+'</small></article>'
 sections=list(dict.fromkeys(a['section'] for a in data))
