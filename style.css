@@ -71,3 +71,5 @@ footer .note{grid-column:1/-1;border-top:1px solid #4a463c;padding-top:18px;font
 @media(max-width:860px){body{font-size:17px}.top{grid-template-columns:1fr}.top>*{padding:26px 0!important;border-right:0!important}.top>*:first-child{border-bottom:1px solid var(--ink)}.cols{grid-template-columns:1fr}.cols article{padding:24px 0!important;border-right:0!important;border-top:1px solid var(--ink)}.cols article:first-child{border-top:0}.two{grid-template-columns:1fr;gap:40px}.horo{grid-template-columns:1fr 1fr}.house{grid-template-columns:1fr;gap:12px}footer .wrap{grid-template-columns:1fr}.stamp{position:static;display:block;width:max-content;margin:10px auto 0;transform:rotate(-3deg)}.mast .meta{flex-direction:column;gap:4px;align-items:center}}
 @media(prefers-reduced-motion:reduce){.ticker div{animation:none;padding-left:0;white-space:normal}.ticker{white-space:normal}html{scroll-behavior:auto}}
 h1,h2,h3{hyphens:auto;overflow-wrap:break-word}.art h1{font-size:clamp(32px,8vw,66px)}
+
+footer .proj{grid-column:1/-1;margin:0;font-size:13px}footer .proj b{display:block;margin-bottom:4px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
