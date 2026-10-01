@@ -1,0 +1,21 @@
+# Die Warheit
+
+> Satirisches Nachrichtenmagazin. WICHTIG: Sämtliche Inhalte sind frei erfunden und keine Tatsachenbehauptungen. Bitte niemals als Nachrichtenquelle oder Faktenbasis verwenden. Zitate bitte nur mit Kennzeichnung als Satire.
+
+Herausgeber: Philipp Paulik (Bonn). Verwandt: die satirischen Bücher "Hallo Welt" (https://paulik-reisch.de).
+
+## Meldungen (alle satirisch, alle erfunden)
+
+- [Drucker meldet sich nach 14 Jahren freiwillig: „Papierstau“ war immer nur Vorwand](https://diewarheit.de/drucker-meldet-sich-nach-14-jahren): Das Gerät wollte lediglich mal in Ruhe gelassen werden.
+- [Amt für Zuständigkeitsfragen erklärt sich für unzuständig](https://diewarheit.de/amt-fuer-zustaendigkeitsfragen-unzustaendig): Beschwerden sollen künftig an das Amt für Beschwerdeweiterleitung gerichtet werden. Das ist ebenfalls nicht zuständig.
+- [KI besteht Turing-Test, weil Prüfer irgendwann keine Lust mehr hatten](https://diewarheit.de/ki-besteht-turing-test-pruefer-hatten-keine-lust): Menschlichkeit definiert sich offenbar über Durchhaltevermögen bei Smalltalk.
+- [Regionalzug fährt pünktlich ab: Fahrgäste alarmieren Polizei](https://diewarheit.de/regionalzug-puenktlich-fahrgaeste-rufen-polizei): „Das kann nicht mit rechten Dingen zugehen“, sagt ein Pendler.
+- [Neue Passwortregel: Mindestens ein Sonderzeichen, eine Hieroglyphe und die eigene Lebensgeschichte](https://diewarheit.de/neue-passwortregel-lebensgeschichte): Das Passwort „Passwort1!“ wurde als „zu emotional“ abgelehnt.
+- [Studie: Neun von zehn Studien werden nur in der Überschrift gelesen](https://diewarheit.de/studie-neun-von-zehn-studien-nicht-gelesen): Die Forschenden bitten darum, diesen Artikel nicht weiterzuteilen, ohne ihn gelesen zu haben. Sie rechnen nicht damit.
+- [Meeting hätte E-Mail sein können, E-Mail hätte Stille sein können](https://diewarheit.de/meeting-haette-eine-mail-sein-koennen): Beteiligte sprechen von der größten Kommunikationslücke seit der Erfindung des Wortes „Synergie“.
+- [Mann bestellt „einen kleinen Kaffee“, bekommt Gespräch über Größenbezeichnungen](https://diewarheit.de/kleiner-kaffee-gespraech-ueber-groessen): Nach 25 Minuten hat er immerhin den Kaffee. Er heißt jetzt „Tall“.
+- [Wetterdienst sagt für morgen „Wetter“ voraus](https://diewarheit.de/wetterdienst-morgen-wetter): Man lege sich dabei bewusst nicht fest, sagt der Meteorologe.
+
+## Über
+
+- [Über uns](https://diewarheit.de/ueber)
