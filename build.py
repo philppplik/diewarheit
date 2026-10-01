@@ -1,4 +1,4 @@
-import json,pathlib,shutil,html,datetime,sys
+import json,pathlib,shutil,html,datetime,sys,email.utils
 from bs4 import BeautifulSoup
 ROOT=pathlib.Path(__file__).parent;OUT=ROOT/'site';OUT.mkdir(exist_ok=True)
 BASE=ROOT/'base';data=json.loads((ROOT/'articles.json').read_text());h=html.escape
@@ -15,6 +15,8 @@ for a in data:
   if not m:m=p.new_tag('meta');m['name']=name;p.head.append(m)
   m['content']=value
  p.find('link',rel='canonical')['href']=url
+ if a['datePublished']:
+  dt=datetime.datetime.fromisoformat(a['datePublished']);p.select_one('.meta span').string=f'Ausgabe Nr. 2 · {dt.day}.{dt.month:02}.{dt.year}'
  for prop,value in [('og:title',a['title']+' (Satire)'),('og:description',a['deck']+' Satire.'),('og:url',url),('og:image','https://diewarheit.de/'+a['image']),('og:type','article')]:
   m=p.find('meta',attrs={'property':prop})
   if not m:m=p.new_tag('meta');m['property']=prop;p.head.append(m)
@@ -56,6 +58,6 @@ for a in recent:news+=f'<url><loc>https://diewarheit.de/{a["slug"]}</loc><news:n
 # Append actual publications to existing general sitemap and RSS only on approved publication.
 if published:
  sm=(BASE/'sitemap.xml').read_text().replace('</urlset>',''.join(f'<url><loc>https://diewarheit.de/{a["slug"]}</loc><lastmod>{a["dateModified"] or a["datePublished"]}</lastmod></url>' for a in published)+'</urlset>');(OUT/'sitemap.xml').write_text(sm)
- feed=(BASE/'feed.xml').read_text().replace('</channel>',''.join(f'<item><title>{h(a["title"])} (Satire)</title><link>https://diewarheit.de/{a["slug"]}</link><guid>https://diewarheit.de/{a["slug"]}</guid><description>{h(a["deck"])} Satire.</description></item>' for a in published)+'</channel>');(OUT/'feed.xml').write_text(feed)
+ feed=(BASE/'feed.xml').read_text().replace('</channel>',''.join(f'<item><title>{h(a["title"])} (Satire)</title><link>https://diewarheit.de/{a["slug"]}</link><guid>https://diewarheit.de/{a["slug"]}</guid><description>{h(a["deck"])} Satire.</description><pubDate>{email.utils.format_datetime(datetime.datetime.fromisoformat(a["datePublished"]))}</pubDate></item>' for a in published)+'</channel>');(OUT/'feed.xml').write_text(feed)
 (OUT/'robots.txt').write_text((BASE/'robots.txt').read_text()+'\nSitemap: https://diewarheit.de/news-sitemap.xml\n')
 print('Built',len(data),'articles;',len(recent),'eligible news sitemap entries')
